@@ -2,7 +2,6 @@
   "name": "vue2-template",
   "version": "0.1.0",
   "author": "Gavin",
-  "private": true,
   "scripts": {
     "commit": "git-cz",
     "serve": "vue-cli-service serve",

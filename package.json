@@ -35,6 +35,11 @@
     "svg-sprite-loader": "^5.1.1",
     "vue-template-compiler": "^2.6.11"
   },
+  "keywords": [
+    "vue",
+    "template",
+    "vue-template"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",

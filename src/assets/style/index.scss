@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@import 'var.scss';
+
+/* 全局样式 */
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}

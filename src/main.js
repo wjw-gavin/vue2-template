@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
 import store from './store'
+import './assets/style/index.scss'
 
 //注册全局常用方法
 import * as global from '@/utils/global'

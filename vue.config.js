@@ -1,3 +1,9 @@
+const path = require("path");
+
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
+
 module.exports = {
   lintOnSave: "error",
   devServer: {
@@ -20,7 +26,7 @@ module.exports = {
       }
     }
   },
-  configureWebpack: config => {
+  configureWebpack: (config) => {
     config["externals"] = {
       vue: "Vue",
       vuex: "Vuex",
@@ -28,5 +34,23 @@ module.exports = {
       vant: "vant",
       "vue-router": "VueRouter"
     };
+  },
+  chainWebpack: (config) => {
+    config.plugins.delete("prefetch");
+    // 修复HMR
+    config.resolve.symlinks(true);
+    // set svg-sprite-loader
+    config.module.rule("svg").exclude.add(resolve("src/icons")).end();
+    config.module
+      .rule("icons")
+      .test(/\.svg$/)
+      .include.add(resolve("src/icons"))
+      .end()
+      .use("svg-sprite-loader")
+      .loader("svg-sprite-loader")
+      .options({
+        symbolId: "icon-[name]"
+      })
+      .end();
   }
 };

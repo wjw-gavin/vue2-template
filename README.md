@@ -1,5 +1,5 @@
 # vue2.x项目模板
-
+基于vue-cli4创建的项目模板，支持svg，并集成eslint，prettier，commitlint，husky等工具。
 #### 介绍
 
 #### 安装教程

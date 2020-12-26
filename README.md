@@ -4,8 +4,7 @@
 
 #### 安装教程
 
-1. yarn global add commitizen (全局安装，兼容windows，若已安装，请忽略该步骤)
-2. yarn install
+1. yarn install
 
 #### 使用说明
 

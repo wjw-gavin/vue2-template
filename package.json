@@ -7,7 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "format": "prettier --write \"*.js\" \"src/**/*.vue\" \"src/**/*.js\" \"src/**/*.scss\""
+    "format": "prettier --write \"src/**/*.vue\" \"src/**/*.js\" \"src/**/*.scss\""
   },
   "dependencies": {
     "axios": "^0.21.0",
@@ -57,10 +57,7 @@
     }
   },
   "lint-staged": {
-    "*.scss": [
-      "prettier --write"
-    ],
-    "*.{vue,js}": [
+    "src/**/*.{vue,js,scss}": [
       "prettier --write",
       "eslint --fix"
     ]
